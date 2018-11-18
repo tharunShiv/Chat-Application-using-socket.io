@@ -1,0 +1,75 @@
+<!--<header> 
+  <img src="/img/logo.gif" >
+  
+      
+      <div id="branding">
+         <h1>Faculty-Communication</h1>
+      </div>
+          <nav>
+            <ul>
+              <% if (typeof user == 'object' && user) { %>
+              <li><a href="/users/home">Home</a></li>
+              <li><a href="/users/about">About </a></li>
+              <li><a href="/users/contactus">Contact Us</a></li>
+              <li><a href="/users/logout">LogOut</a></li>
+              <%} else{ %>
+              
+              <li><a href="/users/register">Register</a></li>
+              <li><a href="/users/about">About </a></li>
+              <li><a href="/users/contactus">Contact Us</a></li>
+              <% } %>
+            </ul>  
+         </nav>
+  
+</header>-->
+<% if (typeof user == 'object' && user) { %>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <logo>
+            <a class="navbar-brand" href="#">
+                <img src="/img/logo.gif" height="30" alt="">
+            </a>
+        </logo>
+      <a class="navbar-brand" href="/users/index"><span style="color:grey;">Faculty-Communication</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="/users/home" style="color:darkslateblue;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/users/about" style="color:darkslateblue;">About </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/users/contactus" style="color:darkslateblue;">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/users/logout" style="color:darkslateblue;">LogOut</a>
+        </form>
+      </div>
+    </nav>
+  <%} else{ %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <logo>
+              <a class="navbar-brand" href="#">
+                  <img src="/img/logo.gif" height="30" alt="">
+              </a>
+          </logo>
+        <a class="navbar-brand" href="/users/index"><span style="color:grey;">Faculty-Communication</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a href="/users/home" style="color:darkslateblue;"> Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/users/register" style="color:darkslateblue;">Register </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/users/about" style="color:darkslateblue;">About </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/users/contactus" style="color:darkslateblue;">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </form>
+        </div>
+      </nav>
+  <% } %>

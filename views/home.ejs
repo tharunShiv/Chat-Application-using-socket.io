@@ -1,0 +1,76 @@
+
+<html>
+    
+        <head>
+            <title>DSCE | Welcome</title>
+            <meta charset="UTF-8">
+            <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+            <meta name="author" content="Tharun K">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <meta name="description" content="A faculty contact Database">
+                <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        </head>
+        
+        <body>
+          <% include partials/layout.ejs %>
+    <section id="showcase_about">
+        <div class="container">
+          <h1>D  S  I</h1>
+            <pre>
+            <p>   L  i  v  e    T  h  e    D  r  e  a  m</p>
+            </pre>
+        </div>
+      </section>
+      
+      <br/><br/>
+
+                <div class="container-fluid">
+                    <div class="row">
+                                    
+                                    <div class="col-md-3" style="color:firebrick;" align="center">
+                        
+                                            <h4>Welcome <u><%= user.name %></u></h4>
+                                            
+                                            <ul class="list-group">
+                                                    <li class="list-group-item"><a href="/users/chat" class="list">ChatRoom</a></li>
+                                                    <li class="list-group-item"><a href="/users/home" class="list">Search Faculties</a></li>
+                                                    <br/>
+                                                    <li class="list-group-item"><a href="/users/update" class="list">Update about Yourself</a></li>
+                                                    <li class="list-group-item"><a href="/users/update" class="list"></a><a href="/users/profilev" class="list">View your Profile</a></li> 
+                                                </ul>
+                            </div>
+                            <div class="col-md-1"></div>
+           <div class="col-md-8">
+           
+           
+                        <h3>Search For The Required Faculty/Group Of Faculty</h3> 
+                        <br/><br/>
+                        <form method="GET" class="form-inline" action="home">
+                            <input id="mysearch" class="form-control" name="search" type="search" placeholder="Search For a Specific Field"/>&nbsp;&nbsp;&nbsp;
+                            <input id="search" class="btn btn-info" type="submit" >
+                        </form><br/>
+                    </div>
+            </div>
+            </div>
+              
+
+          
+           
+      
+      <footer class="fabout">
+          <p><a href="/users/contactus">Contact Us </a>for any Queries or to Report any bug </p>
+      </footer>
+    
+    </body>
+    </html>

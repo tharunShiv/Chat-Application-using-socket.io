@@ -1,0 +1,611 @@
+/*
+body{
+      font:15px/1.5; 
+      padding:0;
+      margin:0;
+      background-color:#f3f3f3;
+    }
+
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+.uprofile{
+    margin-left:30%;
+    width:60%;
+    font-size:18px;
+}
+
+header {
+    background:#35424a;
+    color:#ffffff;
+    padding-top:5px;
+    min-height:70px;
+    border-bottom:#00ffff 3px solid;
+    overflow:hidden;
+}
+header img{
+    float:left;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+header a{
+    color:#ffffff;
+    text-decoration:none;
+    text-transform:capitalize;
+    font-size:19px;
+    }
+
+header li{
+    
+    display:inline;
+    padding: 51px 60px 0 0px;
+    
+}
+
+header #branding{
+    float:left;
+}
+
+header #branding h1{
+    margin-top: 60px;
+    margin-left:8px;
+    color:aqua;
+}
+
+header nav{
+    float:right;
+    margin-top:10px;
+}
+
+header .highlight , header .current a{
+    color:aqua;
+    font-weight:bold;
+}
+
+header a:hover{
+    color:aqua;
+    font-weight:bold;
+}
+
+
+ #showcase{
+    min-height:150px;
+    max-height:300px;
+    background:url("../img/dsce.png") no-repeat 0 -280px ;
+
+     text-align:center;
+     color:#ffffff;
+}
+
+ #showcase_about{
+    min-height:100px;
+    max-height:150px;
+    background:url("../img/dsce.png") no-repeat 0 -280px ;
+     text-align:center;
+     color:#ffffff;
+}
+#showcase_about h1{
+    margin-top:40px;
+    font-size:25px;
+}
+
+#showcase_about p{
+    margin-top:0px;
+    
+    
+    font-size:20px;
+}
+#showcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+    
+}
+#showcase p{
+ font-size:20px;
+}
+
+.containerlogin{
+    width:100%;
+    margin:auto;
+   
+}
+
+#loginselect{
+    margin-left:100px
+}
+
+#mysearch{
+   width:50%;
+   height:40px;
+   border-top:1px solid black;
+   border-bottom:1px solid black;
+   border-left: 2px solid aqua;
+   border-bottom: 3px solid aqua;
+}
+
+.logina{
+    float:right;
+    margin:auto;
+    overflow:hidden;
+    margin-right:1%;
+    width:200px;
+    margin-top:25px;
+}
+
+#loginside{
+   width:30%;
+    
+    color:black;
+    margin:auto;
+    
+}
+
+
+
+#registerF{
+   width:30%;
+   color:black;
+   font-size: 20px;
+   margin:auto;
+   text-align: center;
+}
+
+.profileu{
+    
+    width:80%;
+    margin:auto;
+    padding:20px;
+    
+}
+
+#profileF{
+    width:40%;
+    color:black;
+    font-size: 20px;
+    
+    text-align: center;
+    margin:auto;
+}
+
+#profileF2{
+    width:60%;
+    color:black;
+    font-size: 20px;
+    
+   
+    margin:auto;
+}
+
+
+.registerT{
+    width:80%;
+    margin:auto;
+
+}
+
+.alert-danger{
+   background-color:#E0ABAB;
+   border:1px solid #FA0000;
+   color:red;
+   text-align:center;
+   width:30%;
+   margin:auto;
+   margin-bottom:1%;
+   }
+
+   .alert-success{
+    background-color:#7BDD83;
+    border:1px solid #0DAC1A;
+    color:#03720C;
+    text-align:center;
+    width:30%;
+    margin:auto;
+    margin-bottom:1%;
+    margin-top:1%;
+    }
+
+form{
+    align-content: center;
+    
+}
+
+.list{
+    color:white;
+    text-decoration: none;
+    font-size:17px;
+}
+.list:hover{
+    color:aqua;
+    text-decoration:underline;
+}
+
+
+
+#articleS{
+    margin-left:5%;
+    margin-top:3%;
+    width:60%;
+    padding:20px;
+}
+
+#loginal{
+    float:left;
+    margin-left:1%;
+    margin-top:2%;
+    
+}
+
+#profileual{
+    float:left;
+    margin-left:1%;
+    margin-top:2%;
+    background-color:#35424a;
+    padding:20px;
+    color:white;
+    border:2px solid aqua;
+    
+}
+
+#mailS{
+    padding:20px;
+    margin-left:15%;
+    margin-top:5%;
+    width:50%;
+    display:inline-block;
+}
+
+#chatal{
+    float:left;
+    margin-left:5%;
+    margin-top:2%;
+    background-color:#35424a;
+    border:2px solid aqua;
+    padding:20px;
+}
+
+#mailal{
+    float:left;
+    margin-left:5%;
+    margin-top:2%;
+    background-color:#35424a;
+    border:2px solid aqua;
+    padding:20px;
+
+}
+.ifield{
+    text-align: center;
+    width: 80%;
+    margin-left:10%;
+    border:none;
+    border-bottom:2px solid aqua;
+    
+}
+.ifield:focus{
+    outline:none;
+}
+input{
+    margin-top:5px;
+    margin-left:75px;
+    margin-right:75px;
+    }
+#log{
+    margin-left:90px;
+    border:1px solid aqua;
+   background-color:white;
+    color:black;
+    font-weight:bold;
+}
+
+#sign{
+    width:30%;
+    
+    margin:auto;
+     border:1px solid aqua;
+    background-color:white;
+    color:black;
+    font-weight:bold;;
+}
+#sign:hover , #search:hover , #submit:hover , #log:hover {
+    background-color:aqua;
+    color:white;
+    border:1px solid aqua;
+    }
+#search , #submit{
+    border:1px solid aqua;
+   background-color:white;
+    color:black;
+    font-weight:bold;
+}
+
+
+
+#search{
+    height:40px;
+    width:20%;
+}
+
+legend{
+    color:black;
+    font-weight:bold;
+}
+
+section article{
+    float:left;
+    font-size:17px;
+    
+    
+}
+
+ #a1{
+    float:left;
+    width:200px;
+}
+section #a2{
+    float:none;
+    margin-left:300px;
+}
+section #a3{
+    float:right;
+    margin-left:100px;
+}
+section #a4{
+    float:right;
+    margin-left:100px;
+}
+section aside{
+    float:right;
+    background-color:#35424a;
+    padding:20px;
+    color:white;
+    border:2px solid aqua;
+    
+}
+
+.caside{
+    margin-top:22px;
+    }
+
+
+.fabout{
+    background-color:#35424a;
+    min-height:50px;
+    max-height:70px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+    margin-top:50px;
+}
+.fabout p{
+    padding-top:5px;
+    color:white;
+}
+.fabout a{
+    text-decoration:none;
+    font-weight:bold;
+}
+.fabout a:visited{
+    color:aqua;
+    }
+.fabout a:hover{
+    color:white;
+}
+.fcontactus{
+    background-color:#35424a;
+    min-height:30px;
+    max-height:50px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+    margin-top:19px;
+}
+.fcontactus p{
+    color:white;
+    
+}
+.fconatctusspan{
+    font-weight:bold;
+    color:aqua;
+}
+
+.flogin{
+    margin-top:325px;
+     background-color:#35424a;
+    min-height:50px;
+    max-height:70px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+}
+.flogin p{
+    
+    color:white;
+}
+.flogin a{
+    text-decoration:none;
+    font-weight:bold;
+}
+.flogin a:visited{
+    color:aqua;
+    }
+.flogin a:hover{
+    color:white;
+}
+
+body,textarea,input{
+    font:13px "Trebuchet MS", sans-serif;
+}
+
+.chat{
+    
+    margin:auto;
+    margin-top:5%;
+    max-width:300px;
+}
+
+.chat-messages,
+.ta,
+.chat-name{
+    border:2px solid aqua;
+}
+
+.chat-message{
+    margin-bottom:10px;
+}
+
+.chat-messages{
+    width:100%;
+    height:300px;
+    overflow-y:scroll;
+    padding:10px;
+}
+
+.chat-name{
+    width:100%;
+    padding:10px;
+    border-bottom:0;
+    margin:0;
+}
+
+.ta{
+    width:100%;
+    padding:10px;
+    border-bottom:2px solid aqua;
+    border-top:none;
+    margin:0;
+    max-width:100%;
+}
+
+.chat-status{
+    color:#888;
+}
+
+.chat textarea,
+.chat-name{
+    outline:none;
+}
+
+
+
+*/
+#showcase{
+    min-height:150px;
+    max-height:300px;
+    background:url("../img/dsce.png") no-repeat 0 -280px ;
+
+     text-align:center;
+     color:#ffffff;
+}
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+}
+
+ #showcase_about{
+    min-height:100px;
+    max-height:150px;
+    background:url("../img/dsce.png") no-repeat 0 -280px ;
+     text-align:center;
+     color:#ffffff;
+}
+#showcase_about h1{
+    margin-top:40px;
+    font-size:25px;
+}
+
+#showcase_about p{
+    margin-top:0px;
+    
+    
+    font-size:20px;
+}
+#showcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+    
+}
+#showcase p{
+ font-size:20px;
+}
+
+.fabout{
+    background-color:#35424a;
+    min-height:50px;
+    max-height:70px;
+    align-content:center;
+    text-align:center;
+    border-top:2px solid aqua;
+    margin-top:50px;
+}
+.fabout p{
+    padding-top:5px;
+    color:white;
+}
+.fabout a{
+    text-decoration:none;
+    font-weight:bold;
+}
+.fabout a:visited{
+    color:aqua;
+    }
+.fabout a:hover{
+    color:white;
+}
+a{
+    color:darkgrey;
+}
+.chat{
+  
+    margin:auto;
+    margin-top:5%;
+    max-width:300px;
+  }
+  
+  .chat-messages,
+  .ta,
+  .chat-name{
+    border:2px solid aqua;
+  }
+  
+  .chat-message{
+    margin-bottom:10px;
+  }
+  
+  .chat-messages{
+    width:100%;
+    height:300px;
+    overflow-y:scroll;
+    padding:10px;
+  }
+  
+  .chat-name{
+    width:100%;
+    padding:10px;
+    border-bottom:0;
+    margin:0;
+  }
+  
+  .ta{
+    width:100%;
+    padding:10px;
+    border-bottom:2px solid aqua;
+    border-top:none;
+    margin:0;
+    max-width:100%;
+  }
+  
+  .chat-status{
+    color:#888;
+  }
+  
+  .chat textarea,
+  .chat-name{
+    outline:none;
+  }
+  

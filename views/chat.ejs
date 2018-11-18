@@ -1,0 +1,204 @@
+<html>
+    
+    <head>
+        <title>DSCE | Welcome</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="dsce,dayananda,sagar,college,of,engineering,faculty,database,contact,faculties,mini,project">
+        <meta name="author" content="Tharun K">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="A faculty contact Database">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    </head>
+    
+    <body>
+
+            <% include partials/layout.ejs %>
+            <br/>
+            <div class="container-fluid">
+                    <div class="row">
+                        
+                   <div class="col-md-3" style="color:firebrick;" align="center">
+                                
+                        <h4>Welcome <u><%= user.name %></u></h4>
+                                                    
+                        <ul class="list-group">
+                                <li class="list-group-item"><a href="/users/chat" class="list">ChatRoom</a></li>
+                                <li class="list-group-item"><a href="/users/home" class="list">Search Faculties</a></li>
+                                <br/>
+                                <li class="list-group-item"><a href="/users/update" class="list">Update about Yourself</a></li>
+                                <li class="list-group-item"><a href="/users/update" class="list"></a><a href="/users/profilev" class="list">View your Profile</a></li> 
+                            </ul>
+                                <br/>
+                            </div>
+                            <div class="col-md-2"></div>
+           <div class="col-md-5" >
+                <div class="chat">
+                        <input type="text" class="chat-name" value="<%= user.name %>" disabled>
+                        <div class="chat-messages"></div>
+                
+                
+                        <textarea class="ta" placeholder="Type your message"></textarea>
+                        <div class="chat-status">Status: <span>Idle</span></div>
+                    <div class="col-md-2"></div>
+            </div>
+
+            </div>
+
+
+
+
+
+ <!--    
+<div class="row">
+
+        <div class="col-md-3" style="color:firebrick;" align="center">
+                        
+                <h4>Welcome <u><%= user.name %></u></h4>
+                                            
+                <ul class="list-group">
+                        <li class="list-group-item"><a href="/users/chat" class="list">ChatRoom</a></li>
+                        <li class="list-group-item"><a href="/users/home" class="list">Search Faculties</a></li>
+                        <br/>
+                        <li class="list-group-item"><a href="/users/update" class="list">Update about Yourself</a></li>
+                        <li class="list-group-item"><a href="/users/update" class="list"></a><a href="/users/profilev" class="list">View your Profile</a></li> 
+                    </ul>
+                        <br/>
+                    </div>
+<div class="col-md-7" align="center">
+
+
+
+        <div class="chat">
+        <input type="text" class="chat-name" value="<%= user.name %>" disabled>
+        <div class="chat-messages"></div>
+
+
+        <textarea class="ta" placeholder="Type your message"></textarea>
+        <div class="chat-status">Status: <span>Idle</span></div>
+
+</div>
+
+</div>
+closing of row div  
+</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/><br/>
+<script src="http://127.0.0.1:8080/socket.io/socket.io.js">
+</script>
+
+
+<script>
+    //a function to wrap all the functionality
+(function() {
+var getNode = function(s){
+return document.querySelector(s);
+},
+//get required nodes
+messages = getNode('.chat-messages')
+status = getNode('.chat-status span'),
+textarea = getNode('.chat textarea'),
+chatName = getNode('.chat-name'),
+
+statusDefault=status.textContent;
+console.log(statusDefault);
+  console.log(textarea);
+  console.log(chatName);
+
+  setStatus = function(s){
+status.textcontent = s;    
+
+
+
+
+if(s !== statusDefault){
+    var delay = setTimeout(function(){
+          setStatus(statusDefault);
+          
+    },4000);
+    clearInterval(delay);
+}
+};
+
+setStatus('Testing...');
+
+
+
+
+try{
+var socket=io.connect('http://127.0.0.1:8080');
+}catch(e){
+//send warn message
+}
+
+if(socket !== undefined){
+//listen for output
+socket.on('output', function(data){
+     console.log(data);
+     if(data.length){
+         //loop through results
+         for(var x=0; x<data.length;x=x+1){
+             var message = document.createElement('div');
+             message.setAttribute('class', 'chat-message');
+             message.textContent= data[x].name + '  : '+data[x].message;
+
+              //append
+              messages.appendChild(message);
+              messages.insertBefore(message, messages.firstChild);
+              
+            }
+     }
+});
+
+//listen for a status
+socket.on('status', function(data){
+setStatus((typeof data === 'object')? data.message :data);
+
+if(data.clear === true){
+    textarea.value = '';
+};
+
+});
+
+//listen for keydown
+textarea.addEventListener('keydown', function(event){
+var self = this,
+name = chatName.value;
+//13 is for enter key value
+console.log(event);
+if(event.which ===13 && event.shiftKey === false){
+  socket.emit('input',{
+      name: name,
+      message: self.value
+  });
+  //prevent default behaviour
+ event.preventDefault();
+}
+
+});
+}
+})();
+
+</script>
+</body>
+</html>
